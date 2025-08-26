@@ -1,30 +1,52 @@
-﻿using System.Collections.Specialized;
-using System.Text.Json.Serialization;
-
-public class Person
+﻿public class User
 {
+    public int Id;
+    public string NickName;
     public string Name;
     public string SerName;
-    public string Address;
     public string Email;
-    public int DateOfBerth;
+    public string Password;
+    public DateTime DateTimeCreated = DateTime.Now;
+    public DateTime DateBerthday;
+    
 
-    public Person (string name, string serName, string address, string email, int dateOfBerth)
+    public User(int id, string nickName, string name, string serName, string email, string password,
+        DateTime dateBerthday)
     {
+        Id = id;
+        NickName = nickName;
         Name = name;
         SerName = serName;
-        Address = address;
         Email = email;
-        DateOfBerth = dateOfBerth;
-    }   
+        Password = password;
+        DateBerthday = dateBerthday;
+    }
+
 }
 
-public class Prodram
+public static class UserRedistor 
 {
-    public static void Main()
+    public static List<User> Users;
+
+    public static  bool CheckUser(User userToCheck)
     {
-        Person person = new Person("Рома", "Кузьмин", "40 лет октября 5а", "cU2roma@yandex.ru", 23052005);
-        string Json = JsonSeriaizer.Serialize(person);
+        foreach (User user in Users)
+        {
+            if (user.NickName == userToCheck.NickName || user.Email == userToCheck.Email)
+                return true;
+        }
+        return false;
     }
-    
+
+    public static void RedisterUser (User newUser)
+    {
+        if (!CheckUser(newUser))
+        {
+            Users.Add(newUser);
+        }
+        else
+        {
+            Console.WriteLine("Пользователь уже существует");
+        }
+    }
 }
