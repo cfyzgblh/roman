@@ -15,6 +15,7 @@
 }
 public class Car
 {
+    private static readonly object lockObject = new object();
     public string Brand;
     public string Seria;
     public string Model;
@@ -31,9 +32,8 @@ public class Car
     public void Go()
     {
         for (int i = 0; i < 100; i++)
-        { 
-            Console.SetCursorPosition(30,i);
-            Console.WriteLine($"Дистанция автомобиля {Brand} = {i}")  ;
+        {
+            Console.WriteLine($"Скорость автомобиля {Brand} = {i}")  ;
             Thread.Sleep(1000);
         }
     }
