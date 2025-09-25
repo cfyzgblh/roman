@@ -1,0 +1,17 @@
+C:\Users\Student\source\repos\roman\wordas\wordas\bin\Debug\net7.0-windows\wordas.exe
+C:\Users\Student\source\repos\roman\wordas\wordas\bin\Debug\net7.0-windows\wordas.deps.json
+C:\Users\Student\source\repos\roman\wordas\wordas\bin\Debug\net7.0-windows\wordas.runtimeconfig.json
+C:\Users\Student\source\repos\roman\wordas\wordas\bin\Debug\net7.0-windows\wordas.dll
+C:\Users\Student\source\repos\roman\wordas\wordas\bin\Debug\net7.0-windows\wordas.pdb
+C:\Users\Student\source\repos\roman\wordas\wordas\obj\Debug\net7.0-windows\wordas.csproj.AssemblyReference.cache
+C:\Users\Student\source\repos\roman\wordas\wordas\obj\Debug\net7.0-windows\wordas.Form1.resources
+C:\Users\Student\source\repos\roman\wordas\wordas\obj\Debug\net7.0-windows\wordas.csproj.GenerateResource.cache
+C:\Users\Student\source\repos\roman\wordas\wordas\obj\Debug\net7.0-windows\wordas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\source\repos\roman\wordas\wordas\obj\Debug\net7.0-windows\wordas.AssemblyInfoInputs.cache
+C:\Users\Student\source\repos\roman\wordas\wordas\obj\Debug\net7.0-windows\wordas.AssemblyInfo.cs
+C:\Users\Student\source\repos\roman\wordas\wordas\obj\Debug\net7.0-windows\wordas.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\roman\wordas\wordas\obj\Debug\net7.0-windows\wordas.dll
+C:\Users\Student\source\repos\roman\wordas\wordas\obj\Debug\net7.0-windows\refint\wordas.dll
+C:\Users\Student\source\repos\roman\wordas\wordas\obj\Debug\net7.0-windows\wordas.pdb
+C:\Users\Student\source\repos\roman\wordas\wordas\obj\Debug\net7.0-windows\wordas.genruntimeconfig.cache
+C:\Users\Student\source\repos\roman\wordas\wordas\obj\Debug\net7.0-windows\ref\wordas.dll
