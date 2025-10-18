@@ -1,9 +1,32 @@
 ﻿using ConsoleApp18;
 
+public class BankAccount
+{
+    public int AccountId { get; init; }
+    private BankCard _firstCard = null!;
+    public int CardId { get { return _firstCard.CardId; }}
+    public BankAccount(int accountId)
+    {
+        AccountId = accountId;
+        _firstCard = new BankCard(1);
+    }
+    private class BankCard
+    {
+
+        public int CardId { get; set; }
+        public BankCard(int cardId)
+        {
+            CardId = cardId;
+        }
+    }
+}
 class Program
 {
     static void Main()
     {
+        var romanBankAccount = new BankAccount(1);
+        Console.WriteLine(romanBankAccount.CardId);
+        Console.WriteLine(romanBankAccount.AccountId);
         using (var dbContext = new AppDbContext())
         {
             // Создание категорий
@@ -75,6 +98,33 @@ class Program
 
             dbContext.Users.AddRange(users);
             dbContext.SaveChanges();
+
+            string productName = "Смартфон";
+            var ordersWithSmartphone = dbContext.Orders
+            .Where(o => o.Products.
+            Any(p=>p.Name == productName))
+            ;
+            var usersNameOrderSmartPhones = ordersWithSmartphone
+            .Join(dbContext.Users,
+            o => o.User.UserId,
+            u => u.UserId,
+            (o, u) =>
+            new
+            {
+                u.UserId,
+                u.UserName,
+                o.OrderId,
+                o.OrderDate
+            });
+
+            foreach (var user in usersNameOrderSmartPhones)
+            {
+                Console.WriteLine($"id пользователя{user.UserId}");
+            }
+         
         }
     }
 }
+// db context
+// bankcARD
+//BANKaMOUNT
